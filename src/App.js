@@ -8,7 +8,7 @@ class App extends Component {
       {
         id: 1,
         title: "Pray for at least an hour",
-        is_completed: true
+        is_completed: false
       },
       {
         id: 2,
@@ -22,10 +22,21 @@ class App extends Component {
       }
     ]
   }
+
+  // Toogle Complete
+  toggleComplete = (id) => {
+    this.setState({ todos: this.state.todos.map((todo) => {
+      if(todo.id === id) {
+        todo.is_completed = !todo.is_completed;
+      }
+      return todo;
+    }) });
+  }
+
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos}/>
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete}/>
       </div>
     );
   }
