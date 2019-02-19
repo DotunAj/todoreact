@@ -47,3 +47,17 @@ a {
 input[type="checkbox"] {
   margin:20px;
 }
+
+.todo-button {
+  margin: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ff6600;
+}
+
+.todo-button i:hover {
+  font-size: 19px;
+  color: #bb4e06;
+  transition: all 0.2s;
+}

@@ -16,6 +16,8 @@ export class TodoItem extends Component {
       <div className="todo-item" style={this.getStyle()}>
         <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} />
         <p>{title}</p>
+        {/* TODO: Implement click event to delete todo from todos array */}
+        <button onClick={this.props.deleteTodo.bind(this, id)} className="todo-button"><i className="fas fa-times"></i></button>
       </div>
     )
   }
