@@ -8,7 +8,7 @@ class App extends Component {
       {
         id: 1,
         title: "Pray for at least an hour",
-        is_completed: false
+        is_completed: true
       },
       {
         id: 2,

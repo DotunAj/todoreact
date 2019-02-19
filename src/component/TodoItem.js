@@ -3,10 +3,22 @@ import propTypes from 'prop-types';
 
 
 export class TodoItem extends Component {
+  getStyle = () => {
+    return {
+      backgroundColor: '#f4f4f4',
+      padding: '10px',
+      borderBottom: '1px dotted #ccc',
+      textDecoration: this.props.todo.is_completed ? 'line-through': 'none',
+    }
+  }
+
   render() {
     return (
-      <div>
-        <p>{this.props.todo.title}</p>
+      <div style={this.getStyle()}>
+        <p>
+          <input type="checkbox" /> {' '}
+          {this.props.todo.title}
+        </p>
       </div>
     )
   }
